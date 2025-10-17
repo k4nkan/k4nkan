@@ -11,6 +11,7 @@ import os
 from datetime import datetime, timezone
 from supabase import create_client
 
+# === Supabase 接続設定 ===
 SUPABASE_URL = os.environ["SUPABASE_URL"]
 SUPABASE_KEY = os.environ["SUPABASE_KEY"]
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
@@ -30,45 +31,39 @@ def format_track_row(track: dict) -> str:
 
 def generate_readme(all_time: list, today: list) -> str:
     """Generate README.md content based on Supabase data."""
+
     # Header section
-    header = """# ようこそ
+    header = """# 🫠
 
-のびのびやってます
-暖かい目で見てください
-🫠
-
----
+きゃんたです  
+のびのびやってます  
+暖かい目で見てください  
 
 """
 
     # All-time favorites section
-    section1 = "## お気に入りの曲\n\n"
+    section1 = "### 🎵 お気に入りの曲\n\n"
     if not all_time:
         section1 += "_No data available yet._\n"
     else:
         section1 += "\n".join([f"- {format_track_row(t)}" for t in all_time])
         section1 += "\n"
 
-    # Divider
-    divider = "\n\n---\n\n"
 
     # Today's top tracks section
-    section2 = "## 今日聴いた曲\n\n"
+    section2 = "### 🎧 今日聴いた曲\n\n"
     if not today:
         section2 += "_No songs played today yet._\n"
     else:
         section2 += "\n".join([f"- {format_track_row(t)}" for t in today])
         section2 += "\n"
 
-    # Footer section
-    footer = f"""
----
+    # Footer (Log section)
+    updated_time = datetime.now(timezone.utc).strftime("%Y.%m.%d %H:%M UTC")
+    section3 = "### 📚 Log\n\n"
+    section3 += f"- _Song last updated - {updated_time}_\n"
 
-🕒 _Last updated: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}_
-
-"""
-
-    return header + section1 + divider + section2 + footer
+    return header + section1 + section2 + section3
 
 
 if __name__ == "__main__":
@@ -84,4 +79,4 @@ if __name__ == "__main__":
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(readme)
 
-    print("README.md updated successfully")
+    print("README.md updated successfully ✅")
