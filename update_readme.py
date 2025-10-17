@@ -25,21 +25,24 @@ def fetch_view(view_name: str, limit: int = 5):
 def format_track_row(track: dict) -> str:
     """Format a track record into a Markdown line with icons."""
     play_count = track.get("play_count", 0)
-    emoji = "💿" if play_count > 5 else "🎵" if play_count > 1 else "🎶"
-    return f"{emoji} **{track['track_name']}** — *{track['artist_name']}* ({play_count} plays)"
+    return f"**{track['track_name']}** — *{track['artist_name']}* ({play_count} plays)"
 
 
 def generate_readme(all_time: list, today: list) -> str:
     """Generate README.md content based on Supabase data."""
     # Header section
-    header = """# 🎧 My Spotify Listening Stats
+    header = """# ようこそ
+
+のびのびやってます
+暖かい目で見てください
+🫠
 
 ---
 
 """
 
     # All-time favorites section
-    section1 = "## 🔁 All-Time Favorites\n\n"
+    section1 = "## お気に入りの曲\n\n"
     if not all_time:
         section1 += "_No data available yet._\n"
     else:
@@ -50,7 +53,7 @@ def generate_readme(all_time: list, today: list) -> str:
     divider = "\n\n---\n\n"
 
     # Today's top tracks section
-    section2 = "## ☀️ Today's Most Played\n\n"
+    section2 = "## 今日聴いた曲\n\n"
     if not today:
         section2 += "_No songs played today yet._\n"
     else:
