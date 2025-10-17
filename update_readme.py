@@ -33,15 +33,16 @@ def generate_readme(all_time: list, today: list) -> str:
     """Generate README.md content based on Supabase data."""
 
     # Header section
-    header = """# 🫠
+    header = """
 
-きゃんたです  
-のびのびやってます  
-暖かい目で見てください  
+### 🫠  K4nkan
+- のびのびやってます  
+- 暖かい目で見てください  
 
+---
 """
 
-    # All-time favorites section
+    # 🎵 お気に入りの曲
     section1 = "### 🎵 お気に入りの曲\n\n"
     if not all_time:
         section1 += "_No data available yet._\n"
@@ -49,8 +50,9 @@ def generate_readme(all_time: list, today: list) -> str:
         section1 += "\n".join([f"- {format_track_row(t)}" for t in all_time])
         section1 += "\n"
 
+    section1 += "\n---\n\n"
 
-    # Today's top tracks section
+    # 🎧 今日聴いた曲
     section2 = "### 🎧 今日聴いた曲\n\n"
     if not today:
         section2 += "_No songs played today yet._\n"
@@ -58,10 +60,12 @@ def generate_readme(all_time: list, today: list) -> str:
         section2 += "\n".join([f"- {format_track_row(t)}" for t in today])
         section2 += "\n"
 
-    # Footer (Log section)
+    section2 += "\n---\n\n"
+
+    # 📚 ログセクション
     updated_time = datetime.now(timezone.utc).strftime("%Y.%m.%d %H:%M UTC")
     section3 = "### 📚 Log\n\n"
-    section3 += f"- _Song last updated - {updated_time}_\n"
+    section3 += f"- _Song data last updated: {updated_time}_\n"
 
     return header + section1 + section2 + section3
 
