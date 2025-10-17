@@ -24,7 +24,7 @@
 ### 🎵 お気に入りの曲
 
 - **weekly** — *にしな* (570 plays)
-- **めんどくさいのうた** — *五十嵐ハル* (85 plays)
+- **めんどくさいのうた** — *五十嵐ハル* (86 plays)
 - **秘密の** — *Aki* (80 plays)
 - **可惜夜** — *不眠旅行* (64 plays)
 - **Dream Play Sick** — *illion* (63 plays)
@@ -43,4 +43,4 @@
 
 ### 📚 Log
 
-- _[Song data last updated](https://github.com/k4nkan/k4nkan/actions): 2025.10.17 15:18 UTC_
+- _[Song data last updated](https://github.com/k4nkan/k4nkan/actions): 2025.10.17 16:21 UTC_
