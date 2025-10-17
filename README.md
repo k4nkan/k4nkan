@@ -43,4 +43,4 @@
 
 ### 📚 Log
 
-- _[Song data last updated](https://github.com/k4nkan/k4nkan/actions): 2025.10.17 16:21 UTC_
+- _[Song data last updated](https://github.com/k4nkan/k4nkan/actions): 2025.10.17 17:15 UTC_
