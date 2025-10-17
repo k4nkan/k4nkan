@@ -39,11 +39,11 @@ def generate_readme(all_time: list, today: list) -> str:
 - のびのびやってます  
 - 暖かい目で見てください  
 
-<a href="https://github.com/tocoteron">
-    <img align="left" height="170px" src="https://github-readme-stats.vercel.app/api?username=tocoteron&count_private=true&show_icons=true" />
+<a href="https://github.com/k4nkan">
+    <img align="left" height="170px" src="https://github-readme-stats.vercel.app/api?username=k4nkan&count_private=true&show_icons=true" />
 </a>
-<a href="https://github.com/tocoteron">
-    <img align="left" height="170px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=tocoteron&layout=compact" />
+<a href="https://github.com/k4nkan">
+    <img align="left" height="170px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=k4nkan&layout=compact" />
 </a>
 
 <div style="clear: both;"></div>

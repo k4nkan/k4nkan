@@ -5,11 +5,11 @@
 - のびのびやってます  
 - 暖かい目で見てください  
 
-<a href="https://github.com/tocoteron">
-    <img align="left" height="170px" src="https://github-readme-stats.vercel.app/api?username=tocoteron&count_private=true&show_icons=true" />
+<a href="https://github.com/k4nkan">
+    <img align="left" height="170px" src="https://github-readme-stats.vercel.app/api?username=k4nkan&count_private=true&show_icons=true" />
 </a>
-<a href="https://github.com/tocoteron">
-    <img align="left" height="170px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=tocoteron&layout=compact" />
+<a href="https://github.com/k4nkan">
+    <img align="left" height="170px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=k4nkan&layout=compact" />
 </a>
 
 <div style="clear: both;"></div>
@@ -37,4 +37,4 @@
 
 ### 📚 Log
 
-- _[Song data last updated](https://github.com/k4nkan/k4nkan/actions): 2025.10.17 13:09 UTC_
+- _[Song data last updated](https://github.com/k4nkan/k4nkan/actions): 2025.10.17 13:10 UTC_
