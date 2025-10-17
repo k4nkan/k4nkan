@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install supabase
+          pip install supabase==2.6.0
 
       - name: Update README
         env:
