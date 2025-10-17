@@ -65,7 +65,7 @@ def generate_readme(all_time: list, today: list) -> str:
     # 📚 ログセクション
     updated_time = datetime.now(timezone.utc).strftime("%Y.%m.%d %H:%M UTC")
     section3 = "### 📚 Log\n\n"
-    section3 += f"- _Song data last updated: {updated_time}_\n"
+    section3 += f"- _[Song data last updated](https://github.com/k4nkan/k4nkan/actions): {updated_time}_\n"
 
     return header + section1 + section2 + section3
 
