@@ -1,6 +1,7 @@
 
 
-### 🫠  K4nkan
+### 🫠  k4nkan
+- [ポートフォリオ](https://kanta.it.com/)  
 - のびのびやってます  
 - 暖かい目で見てください  
 
@@ -27,4 +28,4 @@
 
 ### 📚 Log
 
-- _Song data last updated: 2025.10.17 12:41 UTC_
+- _Song data last updated: 2025.10.17 12:53 UTC_

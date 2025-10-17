@@ -11,7 +11,6 @@ import os
 from datetime import datetime, timezone
 from supabase import create_client
 
-# === Supabase 接続設定 ===
 SUPABASE_URL = os.environ["SUPABASE_URL"]
 SUPABASE_KEY = os.environ["SUPABASE_KEY"]
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
@@ -35,7 +34,8 @@ def generate_readme(all_time: list, today: list) -> str:
     # Header section
     header = """
 
-### 🫠  K4nkan
+### 🫠  k4nkan
+- [ポートフォリオ](https://kanta.it.com/)  
 - のびのびやってます  
 - 暖かい目で見てください  
 
