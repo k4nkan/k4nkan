@@ -8,6 +8,7 @@ on:
 jobs:
   update-readme:
     runs-on: ubuntu-latest
+    environment: conf
 
     steps:
       - name: Checkout repository
