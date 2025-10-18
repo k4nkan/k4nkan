@@ -23,7 +23,7 @@ def fetch_top_track():
 
 
 def create_svg(track: dict):
-    """透過背景・中央配置・白背景黒文字・1曲だけ表示するSVGを生成"""
+    """透過背景・中央配置・白背景黒文字で表示するSVGを生成"""
     os.makedirs("data", exist_ok=True)
 
     track_name = track.get("track_name", "No Data")
@@ -36,28 +36,35 @@ def create_svg(track: dict):
   0% {{ transform: rotate(0deg); }}
   100% {{ transform: rotate(360deg); }}
 }}
-circle {{
-  fill: white;
-  stroke: #000;
-  stroke-width: 6;
-  cx: 200;
-  cy: 200;
-  r: 100;
+.rotating {{
   transform-origin: 150px 150px;
-  animation: rotate 10s linear infinite;
+  animation: rotate 5s linear infinite;
 }}
 text {{
-  fill: #000;
+  fill: #fff;
   text-anchor: middle;
   font-family: 'Arial', sans-serif;
 }}
 </style>
 
 <rect width="100%" height="100%" fill="transparent" />
-<circle />
+
+<defs>
+  <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#fbc2eb"/>
+    <stop offset="100%" stop-color="#a6c1ee"/>
+  </linearGradient>
+</defs>
+
+<g class="rotating">
+    <circle cx="150" cy="150" r="100" fill="url(#skyGradient)" stroke="#fff" stroke-width="6"/>
+</g>
+
 <text x="150" y="135" font-size="20">{artist_name}</text>
 <text x="150" y="160" font-size="24" font-weight="bold">{track_name}</text>
 <text x="150" y="185" font-size="18">({play_count} plays)</text>
+
+
 </svg>"""
 
     with open("data/top_track.svg", "w", encoding="utf-8") as f:
