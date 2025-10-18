@@ -96,19 +96,20 @@ def generate_readme(top_track: dict | None, today_track: dict | None) -> str:
 ---
 
 ## 🎵 Favorite Tracks
-<div style="display:flex; justify-content:start; gap:40px; align-items:flex-start;">
-
-  <div style="text-align:center;">
-    <div style="font-weight:bold">Total</div>
-    <img src="./data/top_track.svg" alt="Top Track" width="150">
-  </div>
-
-  <div style="text-align:center;">
-    <div style="font-weight:bold">Today</div>
-    <img src="./data/today_track.svg" alt="Today's Track" width="150">
-  </div>
-
-</div>
+<table>
+    <tr>
+        <td align="center" style="font-weight:bold">Total</td>
+        <td align="center" style="font-weight:bold">Today</td>
+    </tr>
+    <tr>
+    <td align="center">
+        <img src="./data/top_track.svg" alt="Top Track" width="150">
+    </td>
+    <td align="center">
+        <img src="./data/today_track.svg" alt="Today's Track" width="150">
+    </td>
+    </tr>
+</table>
 
 ---
 
