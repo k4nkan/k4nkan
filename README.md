@@ -33,10 +33,10 @@
 
 ### 🎧 今日聴いた曲
 
-- **1991** — *Kenshi Yonezu* (8 plays)
+- **1991** — *Kenshi Yonezu* (19 plays)
 
 ---
 
 ### 📚 Log
 
-- _[Song data last updated](https://github.com/k4nkan/k4nkan/actions): 2025.10.18 02:53 UTC_
+- _[Song data last updated](https://github.com/k4nkan/k4nkan/actions): 2025.10.18 03:27 UTC_
