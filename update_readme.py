@@ -79,18 +79,22 @@ def generate_readme() -> str:
 ## 🫠  [k4nkan](https://kanta.it.com/)  
 
 <table>
-<tr>
-<td>
-    <a href="https://github.com/k4nkan">
-        <img height="150px" src="https://github-readme-stats.vercel.app/api?username=k4nkan&count_private=true&show_icons=true" />
-    </a>
-</td>
-<td>
-    <a href="https://github.com/k4nkan">
-        <img height="150px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=k4nkan&layout=compact" />
-    </a>
-</td>
-</tr>
+    <tr>
+        <td align="center" style="font-weight:bold">Overview</td>
+        <td align="center" style="font-weight:bold">Languages</td>
+    </tr>
+    <tr>
+    <td>
+        <a href="https://github.com/k4nkan">
+            <img height="150px" src="https://github-readme-stats.vercel.app/api?username=k4nkan&count_private=true&show_icons=true" />
+        </a>
+    </td>
+    <td>
+        <a href="https://github.com/k4nkan">
+            <img height="150px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=k4nkan&layout=compact" />
+        </a>
+    </td>
+    </tr>
 </table>
 
 ---
