@@ -2,18 +2,22 @@
 ## 🫠  [k4nkan](https://kanta.it.com/)  
 
 <table>
-<tr>
-<td>
-    <a href="https://github.com/k4nkan">
-        <img height="150px" src="https://github-readme-stats.vercel.app/api?username=k4nkan&count_private=true&show_icons=true" />
-    </a>
-</td>
-<td>
-    <a href="https://github.com/k4nkan">
-        <img height="150px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=k4nkan&layout=compact" />
-    </a>
-</td>
-</tr>
+    <tr>
+        <td align="center" style="font-weight:bold">Overview</td>
+        <td align="center" style="font-weight:bold">Languages</td>
+    </tr>
+    <tr>
+    <td>
+        <a href="https://github.com/k4nkan">
+            <img height="150px" src="https://github-readme-stats.vercel.app/api?username=k4nkan&count_private=true&show_icons=true" />
+        </a>
+    </td>
+    <td>
+        <a href="https://github.com/k4nkan">
+            <img height="150px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=k4nkan&layout=compact" />
+        </a>
+    </td>
+    </tr>
 </table>
 
 ---
@@ -37,4 +41,4 @@
 ---
 
 ## 📚 Log
-- _[Last updated](https://github.com/k4nkan/k4nkan/actions): 2025.10.18 05:40 UTC_
+- _[Last updated](https://github.com/k4nkan/k4nkan/actions): 2025.10.18 06:02 UTC_
