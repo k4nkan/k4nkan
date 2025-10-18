@@ -71,7 +71,7 @@ text {{
     print(f"✅ SVG generated: data/{filename}")
 
 
-def generate_readme(top_track: dict | None, today_track: dict | None) -> str:
+def generate_readme() -> str:
     """README.md を生成"""
     updated_time = datetime.now(timezone.utc).strftime("%Y.%m.%d %H:%M UTC")
 
@@ -120,6 +120,7 @@ def generate_readme(top_track: dict | None, today_track: dict | None) -> str:
 
 if __name__ == "__main__":
     print("🎧 Fetching tracks...")
+
     top_track = fetch_track("top_tracks_all_time")
     today_track = fetch_track("top_tracks_today")
 
@@ -128,7 +129,7 @@ if __name__ == "__main__":
     if today_track:
         create_svg(today_track, "today_track.svg")
 
-    readme = generate_readme(top_track, today_track)
+    readme = generate_readme()
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(readme)
 
