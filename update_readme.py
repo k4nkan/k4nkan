@@ -16,14 +16,14 @@ SUPABASE_KEY = os.environ["SUPABASE_KEY"]
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 
-def fetch_top_track():
+def fetch_track(target: str):
     """Supabaseから再生数トップの曲を1件取得"""
-    res = supabase.table("top_tracks_all_time").select("*").limit(1).execute()
+    res = supabase.table(target).select("*").limit(1).execute()
     return res.data[0] if res.data else None
 
 
-def create_svg(track: dict):
-    """透過背景・中央配置・白背景黒文字で表示するSVGを生成"""
+def create_svg(track: dict, filename: str):
+    """透過背景・中央配置・空グラデーション・白文字で1曲表示するSVG"""
     os.makedirs("data", exist_ok=True)
 
     track_name = track.get("track_name", "No Data")
@@ -57,66 +57,81 @@ text {{
 </defs>
 
 <g class="rotating">
-    <circle cx="150" cy="150" r="100" fill="url(#skyGradient)" stroke="#fff" stroke-width="6"/>
+    <circle cx="150" cy="150" r="125" fill="url(#skyGradient)" stroke="#fff" stroke-width="8"/>
 </g>
 
-<text x="150" y="135" font-size="20">{artist_name}</text>
-<text x="150" y="160" font-size="24" font-weight="bold">{track_name}</text>
-<text x="150" y="185" font-size="18">({play_count} plays)</text>
-
+<text x="150" y="125" font-size="20" fill="#ffffff">{artist_name}</text>
+<text x="150" y="160" font-size="28" font-weight="bold" fill="#ffffff">{track_name}</text>
+<text x="150" y="190" font-size="20" fill="#eeeeee">({play_count} plays)</text>
 
 </svg>"""
 
-    with open("data/top_track.svg", "w", encoding="utf-8") as f:
+    with open(f"data/{filename}", "w", encoding="utf-8") as f:
         f.write(svg)
-    print("✅ SVG generated: data/top_track.svg")
+    print(f"✅ SVG generated: data/{filename}")
 
 
-def generate_readme(track: dict) -> str:
+def generate_readme(top_track: dict | None, today_track: dict | None) -> str:
     """README.md を生成"""
-
     updated_time = datetime.now(timezone.utc).strftime("%Y.%m.%d %H:%M UTC")
 
     return f"""
-### 🫠  [k4nkan](https://kanta.it.com/)  
+## 🫠  [k4nkan](https://kanta.it.com/)  
 
 <table>
-    <tr>
-    <td>
-        <a href="https://github.com/k4nkan">
-            <img height="150px" src="https://github-readme-stats.vercel.app/api?username=k4nkan&count_private=true&show_icons=true" />
-        </a>
-    </td>
-    <td>
-        <a href="https://github.com/k4nkan">
-            <img height="150px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=k4nkan&layout=compact" />
-        </a>
-    </td>
-    </tr>
+<tr>
+<td align="center">Overview</td>
+<td align="center">Languages</td>
+<tr>
+<td>
+    <a href="https://github.com/k4nkan">
+        <img height="150px" src="https://github-readme-stats.vercel.app/api?username=k4nkan&count_private=true&show_icons=true" />
+    </a>
+</td>
+<td>
+    <a href="https://github.com/k4nkan">
+        <img height="150px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=k4nkan&layout=compact" />
+    </a>
+</td>
+</tr>
 </table>
 
 ---
 
-### 🎵 Favorite
-<img src="./data/top_track.svg" alt="Top Track" width="150">
+## 🎵 Favorite Tracks
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center">Total</td>
+<td align="center">Today</td>
+</tr>
+<tr>
+<td align="center">
+    <img src="./data/top_track.svg" alt="Top Track" width="150">
+</td>
+<td align="center">
+    <img src="./data/today_track.svg" alt="Today's Track" width="150">
+</td>
+</tr>
+</table>
 
 ---
 
-### 📚 Log
+## 📚 Log
 - _[Last updated](https://github.com/k4nkan/k4nkan/actions): {updated_time}_
 """
 
 
 if __name__ == "__main__":
-    print("🎧 Fetching top track...")
-    track = fetch_top_track()
-    if not track:
-        print("⚠️ No track data found.")
-        exit(1)
+    print("🎧 Fetching tracks...")
+    top_track = fetch_track("top_tracks_all_time")
+    today_track = fetch_track("top_tracks_today")
 
-    create_svg(track)
-    readme = generate_readme(track)
+    if top_track:
+        create_svg(top_track, "top_track.svg")
+    if today_track:
+        create_svg(today_track, "today_track.svg")
 
+    readme = generate_readme(top_track, today_track)
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(readme)
 
