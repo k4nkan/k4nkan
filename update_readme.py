@@ -80,9 +80,6 @@ def generate_readme(top_track: dict | None, today_track: dict | None) -> str:
 
 <table>
 <tr>
-<td align="center">Overview</td>
-<td align="center">Languages</td>
-<tr>
 <td>
     <a href="https://github.com/k4nkan">
         <img height="150px" src="https://github-readme-stats.vercel.app/api?username=k4nkan&count_private=true&show_icons=true" />
@@ -99,20 +96,19 @@ def generate_readme(top_track: dict | None, today_track: dict | None) -> str:
 ---
 
 ## 🎵 Favorite Tracks
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td align="center">Total</td>
-<td align="center">Today</td>
-</tr>
-<tr>
-<td align="center">
+<div style="display:flex; justify-content:start; gap:40px; align-items:flex-start;">
+
+  <div style="text-align:center;">
+    <div style="font-weight:bold">Total</div>
     <img src="./data/top_track.svg" alt="Top Track" width="150">
-</td>
-<td align="center">
+  </div>
+
+  <div style="text-align:center;">
+    <div style="font-weight:bold">Today</div>
     <img src="./data/today_track.svg" alt="Today's Track" width="150">
-</td>
-</tr>
-</table>
+  </div>
+
+</div>
 
 ---
 
