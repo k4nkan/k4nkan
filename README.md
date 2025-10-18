@@ -33,14 +33,10 @@
 
 ### 🎧 今日聴いた曲
 
-- **shes watching me** — *Milkoi* (38 plays)
-- **ep1 they start noticing each other and nothing really happens but they are so cute** — *Milkoi* (14 plays)
-- **可惜夜** — *不眠旅行* (13 plays)
-- **センカ** — *HALVES* (11 plays)
-- **NIGHT OWL** — *suisoh* (8 plays)
+_No songs played today yet._
 
 ---
 
 ### 📚 Log
 
-- _[Song data last updated](https://github.com/k4nkan/k4nkan/actions): 2025.10.17 23:15 UTC_
+- _[Song data last updated](https://github.com/k4nkan/k4nkan/actions): 2025.10.18 01:16 UTC_
