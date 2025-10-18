@@ -5,12 +5,12 @@
     <tr>
     <td>
         <a href="https://github.com/k4nkan">
-            <img height="170px" src="https://github-readme-stats.vercel.app/api?username=k4nkan&count_private=true&show_icons=true" />
+            <img height="150px" src="https://github-readme-stats.vercel.app/api?username=k4nkan&count_private=true&show_icons=true" />
         </a>
     </td>
     <td>
         <a href="https://github.com/k4nkan">
-            <img height="170px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=k4nkan&layout=compact" />
+            <img height="150px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=k4nkan&layout=compact" />
         </a>
     </td>
     </tr>
@@ -19,9 +19,9 @@
 ---
 
 ### 🎵 Favorite
-<img src="./data/top_track.svg" alt="Top Track" width="300">
+<img src="./data/top_track.svg" alt="Top Track" width="150">
 
 ---
 
 ### 📚 Log
-- _[Last updated](https://github.com/k4nkan/k4nkan/actions): 2025.10.18 04:20 UTC_
+- _[Last updated](https://github.com/k4nkan/k4nkan/actions): 2025.10.18 04:38 UTC_

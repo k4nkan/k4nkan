@@ -37,11 +37,11 @@ def create_svg(track: dict):
   100% {{ transform: rotate(360deg); }}
 }}
 circle {{
-  fill: none;
+  fill: white;
   stroke: #000;
-  stroke-width: 2;
-  cx: 150;
-  cy: 150;
+  stroke-width: 6;
+  cx: 200;
+  cy: 200;
   r: 100;
   transform-origin: 150px 150px;
   animation: rotate 10s linear infinite;
@@ -55,9 +55,9 @@ text {{
 
 <rect width="100%" height="100%" fill="transparent" />
 <circle />
-<text x="150" y="135" font-size="14">{artist_name}</text>
-<text x="150" y="160" font-size="18" font-weight="bold">{track_name}</text>
-<text x="150" y="185" font-size="12">({play_count} plays)</text>
+<text x="150" y="135" font-size="20">{artist_name}</text>
+<text x="150" y="160" font-size="24" font-weight="bold">{track_name}</text>
+<text x="150" y="185" font-size="18">({play_count} plays)</text>
 </svg>"""
 
     with open("data/top_track.svg", "w", encoding="utf-8") as f:
@@ -68,10 +68,6 @@ text {{
 def generate_readme(track: dict) -> str:
     """README.md を生成"""
 
-    track_name = track.get("track_name", "No Data")
-    artist_name = track.get("artist_name", "")
-    play_count = track.get("play_count", 0)
-
     updated_time = datetime.now(timezone.utc).strftime("%Y.%m.%d %H:%M UTC")
 
     return f"""
@@ -81,12 +77,12 @@ def generate_readme(track: dict) -> str:
     <tr>
     <td>
         <a href="https://github.com/k4nkan">
-            <img height="170px" src="https://github-readme-stats.vercel.app/api?username=k4nkan&count_private=true&show_icons=true" />
+            <img height="150px" src="https://github-readme-stats.vercel.app/api?username=k4nkan&count_private=true&show_icons=true" />
         </a>
     </td>
     <td>
         <a href="https://github.com/k4nkan">
-            <img height="170px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=k4nkan&layout=compact" />
+            <img height="150px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=k4nkan&layout=compact" />
         </a>
     </td>
     </tr>
@@ -95,7 +91,7 @@ def generate_readme(track: dict) -> str:
 ---
 
 ### 🎵 Favorite
-<img src="./data/top_track.svg" alt="Top Track" width="300">
+<img src="./data/top_track.svg" alt="Top Track" width="150">
 
 ---
 
