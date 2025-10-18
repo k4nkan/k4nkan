@@ -1,9 +1,5 @@
 
-
-### 🫠  k4nkan
-- [ポートフォリオ](https://kanta.it.com/)  
-- のびのびやってます  
-- 暖かい目で見てください  
+### 🫠  [k4nkan](https://kanta.it.com/)  
 
 <table>
     <tr>
@@ -21,22 +17,11 @@
 </table>
 
 ---
-### 🎵 お気に入りの曲
 
-- **weekly** — *にしな* (570 plays)
-- **めんどくさいのうた** — *五十嵐ハル* (86 plays)
-- **秘密の** — *Aki* (80 plays)
-- **可惜夜** — *不眠旅行* (64 plays)
-- **Dream Play Sick** — *illion* (63 plays)
-
----
-
-### 🎧 今日聴いた曲
-
-- **1991** — *Kenshi Yonezu* (19 plays)
+### 🎵 Favorite
+<img src="./data/top_track.svg" alt="Top Track" width="300">
 
 ---
 
 ### 📚 Log
-
-- _[Song data last updated](https://github.com/k4nkan/k4nkan/actions): 2025.10.18 03:27 UTC_
+- _[Last updated](https://github.com/k4nkan/k4nkan/actions): 2025.10.18 04:08 UTC_

@@ -4,7 +4,7 @@
 Fetches music listening stats from Supabase views
 and updates the GitHub profile README with a stylish summary.
 ─────────────────────────────
-Date: 2025-10-17
+Date: 2025-10-18
 """
 
 import os
@@ -16,28 +16,66 @@ SUPABASE_KEY = os.environ["SUPABASE_KEY"]
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 
-def fetch_view(view_name: str, limit: int = 5):
-    """Fetch data from a Supabase view."""
-    res = supabase.table(view_name).select("*").limit(limit).execute()
-    return res.data or []
+def fetch_top_track():
+    """Supabaseから再生数トップの曲を1件取得"""
+    res = supabase.table("top_tracks_all_time").select("*").limit(1).execute()
+    return res.data[0] if res.data else None
 
 
-def format_track_row(track: dict) -> str:
-    """Format a track record into a Markdown line with icons."""
+def create_svg(track: dict):
+    """透過背景・中央配置・白背景黒文字・1曲だけ表示するSVGを生成"""
+    os.makedirs("data", exist_ok=True)
+
+    track_name = track.get("track_name", "No Data")
+    artist_name = track.get("artist_name", "")
     play_count = track.get("play_count", 0)
-    return f"**{track['track_name']}** — *{track['artist_name']}* ({play_count} plays)"
+
+    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300">
+<style>
+@keyframes rotate {{
+  0% {{ transform: rotate(0deg); }}
+  100% {{ transform: rotate(360deg); }}
+}}
+circle {{
+  fill: none;
+  stroke: #000;
+  stroke-width: 2;
+  cx: 150;
+  cy: 150;
+  r: 100;
+  transform-origin: 150px 150px;
+  animation: rotate 10s linear infinite;
+}}
+text {{
+  fill: #000;
+  text-anchor: middle;
+  font-family: 'Arial', sans-serif;
+}}
+</style>
+
+<rect width="100%" height="100%" fill="transparent" />
+<circle />
+<text x="150" y="135" font-size="14">{artist_name}</text>
+<text x="150" y="160" font-size="18" font-weight="bold">{track_name}</text>
+<text x="150" y="185" font-size="12">({play_count} plays)</text>
+</svg>"""
+
+    with open("data/top_track.svg", "w", encoding="utf-8") as f:
+        f.write(svg)
+    print("✅ SVG generated: data/top_track.svg")
 
 
-def generate_readme(all_time: list, today: list) -> str:
-    """Generate README.md content based on Supabase data."""
+def generate_readme(track: dict) -> str:
+    """README.md を生成"""
 
-    # Header section
-    header = """
+    track_name = track.get("track_name", "No Data")
+    artist_name = track.get("artist_name", "")
+    play_count = track.get("play_count", 0)
 
-### 🫠  k4nkan
-- [ポートフォリオ](https://kanta.it.com/)  
-- のびのびやってます  
-- 暖かい目で見てください  
+    updated_time = datetime.now(timezone.utc).strftime("%Y.%m.%d %H:%M UTC")
+
+    return f"""
+### 🫠  [k4nkan](https://kanta.it.com/)  
 
 <table>
     <tr>
@@ -55,47 +93,28 @@ def generate_readme(all_time: list, today: list) -> str:
 </table>
 
 ---
+
+### 🎵 Favorite
+<img src="./data/top_track.svg" alt="Top Track" width="300">
+
+---
+
+### 📚 Log
+- _[Last updated](https://github.com/k4nkan/k4nkan/actions): {updated_time}_
 """
-
-    # 🎵 お気に入りの曲
-    section1 = "### 🎵 お気に入りの曲\n\n"
-    if not all_time:
-        section1 += "_No data available yet._\n"
-    else:
-        section1 += "\n".join([f"- {format_track_row(t)}" for t in all_time])
-        section1 += "\n"
-
-    section1 += "\n---\n\n"
-
-    # 🎧 今日聴いた曲
-    section2 = "### 🎧 今日聴いた曲\n\n"
-    if not today:
-        section2 += "_No songs played today yet._\n"
-    else:
-        section2 += "\n".join([f"- {format_track_row(t)}" for t in today])
-        section2 += "\n"
-
-    section2 += "\n---\n\n"
-
-    # 📚 ログセクション
-    updated_time = datetime.now(timezone.utc).strftime("%Y.%m.%d %H:%M UTC")
-    section3 = "### 📚 Log\n\n"
-    section3 += f"- _[Song data last updated](https://github.com/k4nkan/k4nkan/actions): {updated_time}_\n"
-
-    return header + section1 + section2 + section3
 
 
 if __name__ == "__main__":
-    print("Fetching data from Supabase views...")
+    print("🎧 Fetching top track...")
+    track = fetch_top_track()
+    if not track:
+        print("⚠️ No track data found.")
+        exit(1)
 
-    all_time = fetch_view("top_tracks_all_time", 5)
-    today = fetch_view("top_tracks_today", 5)
-
-    print(f"Fetched {len(all_time)} all-time tracks, {len(today)} today tracks.")
-
-    readme = generate_readme(all_time, today)
+    create_svg(track)
+    readme = generate_readme(track)
 
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(readme)
 
-    print("README.md updated successfully ✅")
+    print("✅ README.md updated successfully!")
