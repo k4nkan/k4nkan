@@ -28,8 +28,8 @@ text {
     <circle cx="150" cy="150" r="125" fill="url(#skyGradient)" stroke="#fff" stroke-width="8"/>
 </g>
 
-<text x="150" y="125" font-size="20" fill="#ffffff">Laughing Hick</text>
-<text x="150" y="160" font-size="28" font-weight="bold" fill="#ffffff">カシスオレンジ</text>
-<text x="150" y="190" font-size="20" fill="#eeeeee">(5 plays)</text>
+<text x="150" y="125" font-size="20" fill="#ffffff">Bebe Rexha</text>
+<text x="150" y="160" font-size="28" font-weight="bold" fill="#ffffff">Girl in the Mirror</text>
+<text x="150" y="190" font-size="20" fill="#eeeeee">(22 plays)</text>
 
 </svg>
