@@ -28,8 +28,8 @@ text {
     <circle cx="150" cy="150" r="125" fill="url(#skyGradient)" stroke="#fff" stroke-width="8"/>
 </g>
 
-<text x="150" y="125" font-size="20" fill="#ffffff">Black Country, New Road</text>
-<text x="150" y="160" font-size="28" font-weight="bold" fill="#ffffff">Intro</text>
-<text x="150" y="190" font-size="20" fill="#eeeeee">(93 plays)</text>
+<text x="150" y="125" font-size="20" fill="#ffffff">suisoh</text>
+<text x="150" y="160" font-size="28" font-weight="bold" fill="#ffffff">NIGHT OWL</text>
+<text x="150" y="190" font-size="20" fill="#eeeeee">(17 plays)</text>
 
 </svg>
