@@ -30,5 +30,5 @@ text {
 
 <text x="150" y="125" font-size="20" fill="#ffffff">Valley</text>
 <text x="150" y="160" font-size="28" font-weight="bold" fill="#ffffff">Like 1999</text>
-<text x="150" y="190" font-size="20" fill="#eeeeee">(19 plays)</text>
+<text x="150" y="190" font-size="20" fill="#eeeeee">(23 plays)</text>
 </svg>
