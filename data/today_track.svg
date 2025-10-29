@@ -28,7 +28,7 @@ text {
     <circle cx="150" cy="150" r="125" fill="url(#skyGradient)" stroke="#fff" stroke-width="8"/>
 </g>
 
-<text x="150" y="125" font-size="20" fill="#ffffff">Hugh Jackman</text>
-<text x="150" y="160" font-size="28" font-weight="bold" fill="#ffffff">The Other Side</text>
-<text x="150" y="190" font-size="20" fill="#eeeeee">(17 plays)</text>
+<text x="150" y="125" font-size="20" fill="#ffffff">Keala Settle</text>
+<text x="150" y="160" font-size="28" font-weight="bold" fill="#ffffff">This Is Me</text>
+<text x="150" y="190" font-size="20" fill="#eeeeee">(25 plays)</text>
 </svg>
