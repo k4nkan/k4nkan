@@ -28,7 +28,7 @@ text {
     <circle cx="150" cy="150" r="125" fill="url(#skyGradient)" stroke="#fff" stroke-width="8"/>
 </g>
 
-<text x="150" y="125" font-size="20" fill="#ffffff">kegøn</text>
-<text x="150" y="160" font-size="28" font-weight="bold" fill="#ffffff">NEVER DIE YOUNG</text>
-<text x="150" y="190" font-size="20" fill="#eeeeee">(56 plays)</text>
+<text x="150" y="125" font-size="20" fill="#ffffff">the engy</text>
+<text x="150" y="160" font-size="28" font-weight="bold" fill="#ffffff">Night Kids</text>
+<text x="150" y="190" font-size="20" fill="#eeeeee">(2 plays)</text>
 </svg>
