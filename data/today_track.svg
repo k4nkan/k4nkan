@@ -30,5 +30,5 @@ text {
 
 <text x="150" y="125" font-size="20" fill="#ffffff">N0S archive</text>
 <text x="150" y="160" font-size="28" font-weight="bold" fill="#ffffff">Dawn</text>
-<text x="150" y="190" font-size="20" fill="#eeeeee">(1 plays)</text>
+<text x="150" y="190" font-size="20" fill="#eeeeee">(2 plays)</text>
 </svg>
