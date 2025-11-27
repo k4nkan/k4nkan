@@ -28,7 +28,7 @@ text {
     <circle cx="150" cy="150" r="125" fill="url(#skyGradient)" stroke="#fff" stroke-width="8"/>
 </g>
 
-<text x="150" y="125" font-size="20" fill="#ffffff">Justin Bieber</text>
-<text x="150" y="160" font-size="28" font-weight="bold" fill="#ffffff">Baby</text>
-<text x="150" y="190" font-size="20" fill="#eeeeee">(2 plays)</text>
+<text x="150" y="125" font-size="20" fill="#ffffff">ame_no_parade</text>
+<text x="150" y="160" font-size="28" font-weight="bold" fill="#ffffff">Innocent feat.寺久保伶矢</text>
+<text x="150" y="190" font-size="20" fill="#eeeeee">(5 plays)</text>
 </svg>
