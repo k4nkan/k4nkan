@@ -24,18 +24,23 @@
 
 <div align="center">
   <a href="https://github.com/k4nkan/k4nkan">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=k4nkan&repo=k4nkan&theme=tokyonight&hide_border=true&bg_color=00000000" />
+    <img src="./data/repos/repo_k4nkan_k4nkan.svg" alt="k4nkan" />
   </a>
+  &nbsp;&nbsp;&nbsp;
   <a href="https://github.com/k4nkan/k4nkan.github.io">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=k4nkan&repo=k4nkan.github.io&theme=tokyonight&hide_border=true&bg_color=00000000" />
+    <img src="./data/repos/repo_k4nkan_k4nkan_github_io.svg" alt="k4nkan.github.io" />
   </a>
 </div>
+
+<br/>
+
 <div align="center">
   <a href="https://github.com/k4nkan/save-spotify-logs">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=k4nkan&repo=save-spotify-logs&theme=tokyonight&hide_border=true&bg_color=00000000" />
+    <img src="./data/repos/repo_k4nkan_save_spotify_logs.svg" alt="save-spotify-logs" />
   </a>
-  <a href="https://github.com/k4nkan/daily-logs">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=k4nkan&repo=daily-logs&theme=tokyonight&hide_border=true&bg_color=00000000" />
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/k4nkan/DailyLogs">
+    <img src="./data/repos/repo_k4nkan_DailyLogs.svg" alt="DailyLogs" />
   </a>
 </div>
 
@@ -45,10 +50,11 @@
 
 <div align="center">
   <a href="https://github.com/k4nkan">
-    <img src="./data/top_track.svg" alt="Top Track">
+    <img src="./data/tracks/top_track.svg" alt="Top Track">
   </a>
+  &nbsp;&nbsp;&nbsp;
   <a href="https://github.com/k4nkan">
-    <img src="./data/today_track.svg" alt="Today's Track">
+    <img src="./data/tracks/today_track.svg" alt="Today's Track">
   </a>
 </div>
 
