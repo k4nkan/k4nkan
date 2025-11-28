@@ -33,6 +33,6 @@
 
 ---
 
-## 📚 Log
-
-- _[Last updated](https://github.com/k4nkan/k4nkan/actions): 2025.11.28 05:19 UTC_
+<div align="center">
+  <sub>Last updated: 2025.11.28 05:27 UTC</sub>
+</div>
