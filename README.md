@@ -20,6 +20,27 @@
 
 ---
 
+<h2 align="center">📦 Repositories</h2>
+
+<div align="center">
+  <a href="https://github.com/k4nkan/k4nkan">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=k4nkan&repo=k4nkan&theme=tokyonight&hide_border=true&bg_color=00000000" />
+  </a>
+  <a href="https://github.com/k4nkan/k4nkan.github.io">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=k4nkan&repo=k4nkan.github.io&theme=tokyonight&hide_border=true&bg_color=00000000" />
+  </a>
+</div>
+<div align="center">
+  <a href="https://github.com/k4nkan/save-spotify-logs">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=k4nkan&repo=save-spotify-logs&theme=tokyonight&hide_border=true&bg_color=00000000" />
+  </a>
+  <a href="https://github.com/k4nkan/daily-logs">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=k4nkan&repo=daily-logs&theme=tokyonight&hide_border=true&bg_color=00000000" />
+  </a>
+</div>
+
+---
+
 <h2 align="center">🎵 Favorite Tracks</h2>
 
 <div align="center">
@@ -34,5 +55,5 @@
 ---
 
 <div align="center">
-  <sub>Last updated: 2025.11.28 16:23 UTC</sub>
+  <sub>Last updated: 2025.11.28 16:53 UTC</sub>
 </div>
