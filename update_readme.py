@@ -11,8 +11,11 @@ import os
 from datetime import datetime, timezone
 from supabase import create_client
 
-import dotenv
-dotenv.load_dotenv()
+try:
+    import dotenv
+    dotenv.load_dotenv()
+except ImportError:
+    pass
 
 SUPABASE_URL = os.environ["SUPABASE_URL"]
 SUPABASE_KEY = os.environ["SUPABASE_KEY"]
