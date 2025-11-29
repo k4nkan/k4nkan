@@ -40,7 +40,7 @@ def create_svg(track: dict, filename: str, label: str = ""):
     """Generate SVG from template."""
     os.makedirs("data/tracks", exist_ok=True)
 
-    svg_template = read_template("templates/track_template.svg")
+    svg_template = read_template("data/templates/track_template.svg")
 
     svg_filled = (
         svg_template.replace("{{ track_name }}", track.get("track_name", "No Data"))
@@ -70,7 +70,7 @@ def fetch_repo_info(repo_name: str):
         else:
             print(f"❌ Failed to fetch {repo_name}: {res.status_code}")
             return None
-    except Exception as e:
+    except requests.RequestException as e:
         print(f"❌ Error fetching {repo_name}: {e}")
         return None
 
@@ -131,7 +131,7 @@ def create_repo_svg(repo_data: dict, filename: str):
         return
 
     os.makedirs("data/repos", exist_ok=True)
-    svg_template = read_template("templates/repo_card_template.svg")
+    svg_template = read_template("data/templates/repo_card_template.svg")
 
     name = repo_data.get("name", "Unknown")
     description = repo_data.get("description") or "No description provided."
@@ -161,12 +161,13 @@ def create_repo_svg(repo_data: dict, filename: str):
 
 def generate_readme() -> str:
     """Generate README with timestamp."""
-    template = read_template("templates/readme_template.md")
+    template = read_template("data/templates/readme_template.md")
     updated_time = datetime.now(timezone.utc).strftime("%Y.%m.%d %H:%M UTC")
     return template.replace("{{ updated_time }}", updated_time)
 
 
-if __name__ == "__main__":
+def main():
+    """Main execution function."""
     print("🎧 Fetching tracks...")
 
     top_track = fetch_track("top_tracks_all_time")
@@ -195,3 +196,7 @@ if __name__ == "__main__":
         readme_file.write(readme)
 
     print("✅ README.md updated successfully!")
+
+
+if __name__ == "__main__":
+    main()
