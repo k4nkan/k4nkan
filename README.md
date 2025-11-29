@@ -15,6 +15,7 @@
 
 <div align="center">
   <img height="160px" src="https://github-readme-stats.vercel.app/api?username=k4nkan&count_private=true&show_icons=true&theme=tokyonight&hide_border=true&bg_color=00000000" />
+  <img src="https://github-readme-stats.vercel.app/api?username=zizi4n5" />
   <img height="160px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=k4nkan&layout=compact&theme=tokyonight&hide_border=true&bg_color=00000000" />
 </div>
 
@@ -61,5 +62,5 @@
 ---
 
 <div align="center">
-  <sub>Last updated: 2025.11.29 14:04 UTC</sub>
+  <sub>Last updated: 2025.11.29 14:06 UTC</sub>
 </div>
