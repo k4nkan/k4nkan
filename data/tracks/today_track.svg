@@ -21,9 +21,9 @@
   <path d="M25 20 L25 40 M25 40 A 3 3 0 1 1 19 40 M25 20 L38 17 L38 33 M38 33 A 3 3 0 1 1 32 33" stroke="white" stroke-width="1.5" fill="none" transform="translate(0, 0)"/>
 
   <!-- Text Info -->
-  <text x="60" y="26" class="text-title">デジタルラブ</text>
+  <text x="60" y="26" class="text-title">UPDATE</text>
   <text x="60" y="40" class="text-artist">WurtS</text>
-  <text x="240" y="50" class="text-plays" text-anchor="end">49 plays</text>
+  <text x="240" y="50" class="text-plays" text-anchor="end">1 plays</text>
   
   <!-- Label (Total / Today) -->
   <text x="240" y="20" font-family="'Segoe UI', Ubuntu, Sans-Serif" font-size="10px" fill="#70a5fd" text-anchor="end" font-weight="bold">Today's Plays</text>
