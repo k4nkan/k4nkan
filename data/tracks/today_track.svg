@@ -23,7 +23,7 @@
   <!-- Text Info -->
   <text x="60" y="26" class="text-title">Life Is Still Going On</text>
   <text x="60" y="40" class="text-artist">NCT DREAM</text>
-  <text x="240" y="50" class="text-plays" text-anchor="end">13 plays</text>
+  <text x="240" y="50" class="text-plays" text-anchor="end">14 plays</text>
   
   <!-- Label (Total / Today) -->
   <text x="240" y="20" font-family="'Segoe UI', Ubuntu, Sans-Serif" font-size="10px" fill="#70a5fd" text-anchor="end" font-weight="bold">Today's Plays</text>
