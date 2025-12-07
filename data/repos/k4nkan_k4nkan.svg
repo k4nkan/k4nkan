@@ -24,7 +24,7 @@
 
   <g transform="translate(25, 140)">
     <text font-size="20" fill="#CCCCCC" font-family="sans-serif">
-      Convert Spotify and GitHub API data into CSV and display it on my profile overview.
+      Convert GitHub API data into CSV and display it on profile.
     </text>
   </g>
 </svg>
