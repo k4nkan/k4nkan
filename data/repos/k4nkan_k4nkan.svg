@@ -1,15 +1,15 @@
 <svg
-  width="600"
+  width="800"
   height="180"
-  viewBox="0 0 600 180"
+  viewBox="0 0 800 180"
   xmlns="http://www.w3.org/2000/svg"
 >
-  <rect width="600" height="180" rx="12" fill="#2B2B2B" />
+  <rect width="800" height="180" rx="12" fill="#2B2B2B" />
 
   <g transform="translate(20, 20)">
     <g transform="translate(0, 0)">
-      <rect width="80" height="80" rx="10" fill="#CCCCCC" />
-      <image href="https://img.icons8.com/windows/32/repository.png" x="18" y="18" width="44" height="44" />
+      <rect width="80" height="80" rx="10" fill="#FFFFFF"/>
+      <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABCUlEQVR4nO2aQQ7CIBBFf4zpnazncN2dN9HqEY0LN8VrfDdD0hCbVpBCYV4ym4YM82CATQFlWzQA7gDeAJgoDIBeavHmllCATlxDRIwkOSAd7WhnvLGrkRqG1lG8CCciFlSRhSJz4/4FVaS21uLWRdaGKlKLCEs5IyxNxKIiC6G2Vi0ia0MVqUWEpZwRliZiUZGFUFurFpG1oYqUKsJMwpviRFJDFfF8R2K9K1SRhSJTZCdiJEGbUOQouYaQJL1n68S4ei8hIo3ImBmRvUQMkUEkgn4YmMJOsgNwAvAA8AJwFqFcru1ZbKHPLys4/pY9dArvJFyx7KHTSpZxq21CpHMEXPYyRsGPfACd+ux/HpW07AAAAABJRU5ErkJggg==" x="18" y="18" width="44" height="44" />
     </g>
 
     <g transform="translate(110, 30)">
