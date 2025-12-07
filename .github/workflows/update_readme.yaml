@@ -28,17 +28,14 @@ jobs:
           pip install -r requirements.txt
 
       - name: Update README
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
-        run: python update_readme.py
+        run: python main.py
 
       - name: Commit and push changes
         uses: EndBug/add-and-commit@v9
         with:
           author_name: "github-actions[bot]"
           author_email: "github-actions[bot]@users.noreply.github.com"
-          message: "chore: update README from Supabase"
+          message: "chore: update README"
           push: true
           add: "."
         env:
