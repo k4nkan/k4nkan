@@ -9,22 +9,22 @@
   <g transform="translate(20, 20)">
     <g transform="translate(0, 0)">
       <rect width="80" height="80" rx="10" fill="#CCCCCC" />
-      <image href="{{ icon_url }}" x="18" y="18" width="44" height="44" />
+      <image href="https://img.icons8.com/windows/32/repository.png" x="18" y="18" width="44" height="44" />
     </g>
 
     <g transform="translate(110, 30)">
       <text font-size="26" fill="#FFFFFF" font-family="sans-serif">
-        {{ repo_name }}
+        save-spotify-logs
       </text>
       <text y="38" font-size="18" fill="#AAAAAA" font-family="sans-serif">
-        Last update: {{ last_update }}
+        Last update: 2025-11-05
       </text>
     </g>
   </g>
 
   <g transform="translate(25, 140)">
     <text font-size="20" fill="#CCCCCC" font-family="sans-serif">
-      {{ repo_description }}
+      Save Spotify Logs to Supabase by using GitHub Actions
     </text>
   </g>
 </svg>

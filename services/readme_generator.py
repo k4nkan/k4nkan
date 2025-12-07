@@ -1,0 +1,15 @@
+from datetime import datetime, timezone
+
+def read_template(path: str) -> str:
+    with open(path, "r", encoding="utf-8") as f:
+        return f.read()
+
+
+def generate_readme(repo_cards_html: str) -> str:
+    template = read_template("data/templates/readme_template.md")
+    updated = datetime.now(timezone.utc).strftime("%Y.%m.%d %H:%M UTC")
+
+    return (
+        template.replace("{{ repo_cards }}", repo_cards_html)
+                .replace("{{ updated_time }}", updated)
+    )
