@@ -1,3 +1,6 @@
+"""
+This module fetches repository information from GitHub API.
+"""
 import os
 import requests
 
@@ -5,7 +8,7 @@ GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
 
 
 def fetch_repo_info(repo_full: str):
-    """GitHub API から description / updated_at を取得."""
+    """Fetch description and updated_at from GitHub API."""
     headers = {"Accept": "application/vnd.github+json"}
     if GITHUB_TOKEN:
         headers["Authorization"] = f"Bearer {GITHUB_TOKEN}"

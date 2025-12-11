@@ -1,22 +1,24 @@
-
+"""
+This module generates SVG images for repository cards.
+"""
 import base64
 import os
 
 def read_template(path: str) -> str:
+    """Read the template file."""
     with open(path, "r", encoding="utf-8") as f:
         return f.read()
 
 
 def generate_repo_svg(repo_cfg: dict, repo_info: dict, filename: str):
+    """Generate the SVG file for a repository."""
     template_path = "data/templates/repo_card_template.svg"
     template = read_template(template_path)
 
     icon_path = repo_cfg["icon"]
-    # Check if it looks like a local file path and exists
     if not icon_path.startswith("http") and os.path.exists(icon_path):
         with open(icon_path, "rb") as img_f:
             b64_data = base64.b64encode(img_f.read()).decode("utf-8")
-            # Assuming PNG for now based on file extension
             mime_type = "image/png"
             if icon_path.endswith(".svg"):
                 mime_type = "image/svg+xml"
