@@ -6,11 +6,7 @@
 
 <div align="center">
   <h2>📦 Favorite Repositories</h2>
-  <a href="https://github.com/k4nkan/k4nkan"><img src="./data/repos/k4nkan_k4nkan.svg" alt="k4nkan" width="350" /></a>
-<br/>
-<a href="https://github.com/k4nkan/save-spotify-logs"><img src="./data/repos/k4nkan_save_spotify_logs.svg" alt="save-spotify-logs" width="350" /></a>
-<br/>
-<a href="https://github.com/k4nkan/DailyLogs"><img src="./data/repos/k4nkan_DailyLogs.svg" alt="DailyLogs" width="350" /></a>
+  
 </div>
 
 ---
@@ -20,5 +16,5 @@
     <a target="_blank" href="https://icons8.com/icon/33281/repository">Repository</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
   </sub>
   <br/>
-  <sub>Last updated: 2025.12.16 18:30 UTC</sub>
+  <sub>Last updated: 2025.12.16 19:18 UTC</sub>
 </div>
